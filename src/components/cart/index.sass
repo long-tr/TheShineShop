@@ -15,7 +15,7 @@
             @media(min-width: 1025px)
                 font-size: 24px
     .main-table
-        padding: 20px 0
+        padding-top: 30px
         table
             width: 100%
             
@@ -133,101 +133,128 @@
                             color: #76c9d5
                             text-align: right 
                             padding-right: 90px
-        .main-total-amount
-            padding: 25px 0
-            background: #ffffff
-            display: flex
-            justify-content: flex-end
-            padding-right: 90px
-            border-left: 1px solid #e1e1e1
-            border-right: 1px solid #e1e1e1
-            .box-amount
-                width: 370px
-                margin-left: auto
-                .totalamount 
-                    display: flex
-                    justify-content: space-between
-                    p  
-                        font-size: 16px
-                        font-weight: 400
-                        color: #666666
-                    .price
-                        font-size: 20px
-                        font-weight: 700
-                        color: #666666
-                    .total
-                        font-size: 20px
-                        font-weight: 700
-                        color: #76c9d5
-            .totalamount
+        @media(max-width: 1025px)
+            padding-top: 20px
+            overflow-x: scroll
+            table 
+                width: 1000px
+    .main-total-amount
+        padding: 25px 20px
+        background: #ffffff
+        display: flex
+        justify-content: flex-end
+        padding-right: 90px
+        border-left: 1px solid #e1e1e1
+        border-right: 1px solid #e1e1e1
+        .box-amount
+            width: 370px
+            margin-left: auto
+            .totalamount 
                 display: flex
-                align-items: center
-                padding-bottom: 15px
-        .main-discount
-            padding: 25px 0
-            background: #ffffff
+                justify-content: space-between
+                p  
+                    font-size: 16px
+                    font-weight: 400
+                    color: #666666
+                .price
+                    font-size: 20px
+                    font-weight: 700
+                    color: #666666
+                .total
+                    font-size: 20px
+                    font-weight: 700
+                    color: #76c9d5
+        .totalamount
             display: flex
-            justify-content: flex-end
-            padding-right: 90px
-            padding-bottom: 30px
-            border-left: 1px solid #e1e1e1
-            border-right: 1px solid #e1e1e1
-            .box-discount
-                max-width: 700px
-                margin-left: auto 
+            align-items: center
+            padding-bottom: 15px
+        @media(max-width: 1025px)
+            padding: 0 30px
+            padding-top: 20px
+    .main-discount
+        padding: 25px 20px
+        background: #ffffff
+        display: flex
+        justify-content: flex-end
+        padding-right: 90px
+        padding-bottom: 30px
+        border-left: 1px solid #e1e1e1
+        border-right: 1px solid #e1e1e1
+        padding-top: 0
+        .box-discount
+            max-width: 700px
+            margin-left: auto 
+            display: flex
+            justify-content: center
+            align-items: center
+            .title
+                padding-right: 35px
+                h5
+                    font-size: 16px
+                    font-weight: 400
+                    color: #edc2ab
+            .form-group
                 display: flex
                 justify-content: center
                 align-items: center
+                input 
+                    height: 40px
+                    padding: 5px 20px
+                    border: 1px dashed #edc2ab
+                    border-top-left-radius: 5px
+                    border-bottom-left-radius: 5px
+                    border-right: none
+                button
+                    height: 40px
+                    border-top-right-radius: 5px
+                    border-bottom-right-radius: 5px
+                    border: 1px solid #deb0d1
+                    padding: 5px 30px
+                    width: 150px
+                    background: #edc2ab
+        @media(max-width: 1025px)
+            padding: 25px 20px
+            padding-top: 20px
+            .box-discount
+                flex-wrap: wrap
                 .title
-                    padding-right: 35px
-                    h5
-                        font-size: 16px
-                        font-weight: 400
-                        color: #edc2ab
+                    padding-bottom: 15px
                 .form-group
-                    display: flex
-                    justify-content: center
-                    align-items: center
                     input 
-                        height: 40px
-                        padding: 5px 20px
-                        border: 1px dashed #edc2ab
-                        border-top-left-radius: 5px
-                        border-bottom-left-radius: 5px
-                        border-right: none
+                        width: 100%
                     button
-                        height: 40px
-                        border-top-right-radius: 5px
-                        border-bottom-right-radius: 5px
-                        border: 1px solid #deb0d1
-                        padding: 5px 30px
-                        width: 150px
-                        background: #edc2ab
-        .order-now
-            display: flex
-            justify-content: flex-end
-            align-items: center
-            background: #fff
-            padding-right: 90px
-            padding-bottom: 70px
-            border-bottom-left-radius: 10px
-            border-bottom-right-radius: 10px
-            border-bottom: 1px solid #e1e1e1
-            border-left: 1px solid #e1e1e1
-            border-right: 1px solid #e1e1e1
-            button
-                border-radius: 25px
-                background: #deb0d1
-                border: 1px solid #deb0d1
-                height: 50px
-                font-size: 18px
-                font-weight: 400
+                        padding: 5px 10px
+    .order-now
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        background: #fff
+        padding-right: 90px
+        padding-bottom: 70px
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+        border-bottom: 1px solid #e1e1e1
+        border-left: 1px solid #e1e1e1
+        border-right: 1px solid #e1e1e1
+        button
+            border-radius: 25px
+            background: #deb0d1
+            border: 1px solid #deb0d1
+            height: 50px
+            font-size: 18px
+            font-weight: 400
+            color: #ffffff
+            text-transform: uppercase
+            min-width: 330px
+            em 
+                font-size: 24px
                 color: #ffffff
-                text-transform: uppercase
-                min-width: 330px
-                em 
-                    font-size: 24px
-                    color: #ffffff
-                    padding-right: 20px
-        @media(min-width: 1025px)
-            padding: 30px 0
+                padding-right: 20px
+        @media(max-width: 1025px)
+            padding: 25px 20px
+            padding-top: 0
+            padding-bottom: 30px
+            button
+                min-width: 250px
+                max-width: 330px
+                padding: 5px 30px
