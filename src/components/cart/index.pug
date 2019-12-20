@@ -1,0 +1,60 @@
+section.main-breadcrumb
+    .container
+        ul
+            li
+                a(href="#") Trang chủ
+            li
+                a(href="#") Giỏ hàng
+section.the-shine-shop-cart.py-5
+    .container
+        .title-h1
+            h1 Giỏ hàng
+        .main-table
+            table
+                thead
+                    tr 
+                        th Sản Phẩm
+                        th Số lượng 
+                        th Giảm giá
+                        th Thành tiền
+                tbody
+                    -for(x=0; x<3; x++)
+                        tr 
+                            td.name
+                                .image
+                                    img(src="./img/pro-1.png", alt="")
+                                .name-product
+                                    h3 Kem Dưỡng Ẩm Miracle Moisture Cream 50ml
+                                    .delete-product
+                                        a(href="#") 
+                                            em.mdi.mdi-plus-circle-outline
+                                            span Xoá
+                            td.amount
+                                .input-number
+                                    .btn-spin.btn-dec -
+                                    input(type="text", value="1")
+                                    .btn-spin.btn-inc +
+                            td.discount 20.000 đ
+                            td.total 320.000 ₫
+            .main-total-amount
+                .box-amount
+                    .totalamount
+                        p Tạm tính
+                        span.price 1.700.000 ₫
+                    .totalamount
+                        p Phí vận chuyển
+                        span.price 0 ₫
+                    .totalamount
+                        p Cần thanh toán
+                        span.total 1.700.000 ₫
+            .main-discount
+                .box-discount
+                    .title
+                        h5 Sử dụng mã giảm giá
+                    .form-group
+                        input(placeholder="Nhập mã khuyến mãi")
+                        button ÁP DỤNG
+            .order-now
+                button
+                    em.fa.fa-shopping-basket
+                    | tiến hành đặt hàng
