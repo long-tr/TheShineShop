@@ -78,6 +78,7 @@
                 img
                     width: 100%
     .right-wrapper
+        margin-top: 30px
         padding: 20px
         border-radius: 10px
         background: #fefaf8
@@ -112,18 +113,7 @@
                 .new
                     color: #76c9d5
                     font-size: 24px
-                .quantity-box
-                    border: 1px solid #dfaf96
-                    background: #fff
-                    border-radius: 5px
-                    display: inline-flex
-                    button, input
-                        width: 50px
-                        height: 30px
-                        text-align: center
-                        background: none
-                        border: 0
-                        color: #666
+                
                 .color-options
                     .color-item
                         display: inline-block
@@ -175,3 +165,120 @@
                 height: 500px
         .right-wrapper
             height: 500px
+            margin-top: 0
+    .product-detail-wrapper
+        margin-top: 30px
+        @media(min-width: 1025px)
+            margin-top: 50px
+        .heading
+            border-top-left-radius: 10px
+            border-top-right-radius: 10px
+            display: inline-block
+            padding: 10px 25px
+            background: #edc2ab
+            h3
+                font-size: 18px
+                text-transform: uppercase
+                color: #fff
+        .content
+            padding: 20px
+            background: #fefbfa
+            border-bottom-left-radius: 5px
+            border-bottom-right-radius: 5px
+            @media(min-width: 1025px)
+                padding: 40px 90px
+            p
+                color: #666
+                margin-bottom: 20px
+            h5
+                font-size: 20px
+                margin-bottom: 10px
+                color: #deb0d1
+                @media(min-width: 1025px)
+                    font-size: 24px
+            .view-more
+                text-align: center
+                color: #edc2ab
+                font-size: 16px
+                span
+                    text-decoration: underline
+                em
+                    margin-left: 10px
+    .product-item
+        margin-bottom: 0
+        box-shadow: 0px 5px 25px 0px rgba(237, 194, 171, 0.15)
+.quantity-box
+    border: 1px solid #dfaf96
+    background: #fff
+    border-radius: 5px
+    display: inline-flex
+    button, input
+        width: 50px
+        height: 35px
+        text-align: center
+        background: none
+        border: 0
+        color: #666
+.review-item
+    figure
+        padding: 20px
+        background: #ffffff
+        border-radius: 10px
+        box-shadow: 0px 5px 25px 0px rgba(237, 194, 171, 0.15)
+        @media(min-width: 1200px)
+            padding: 30px
+        .image
+            width: 120px
+            height: 120px
+            border-radius: 50%
+            overflow: hidden
+            margin: 0 auto
+        figcaption
+            text-align: center
+            .rate
+                margin-top: 15px
+            h5
+                font-size: 14px
+                color: #76c9d5
+                // font-family: Lato-Black
+                text-transform: uppercase
+                margin-top: 5px
+                margin-bottom: 15px
+            p
+                text-align: left
+                color: #666
+                font-size: 13px
+.other-wrapper
+    margin-top: 30px
+    @media(min-width: 1025px)
+        margin-top: 50px
+    .heading
+        margin-bottom: 20px
+        padding-bottom: 5px
+        border-bottom: 2px solid #edc2ab
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @media(min-width: 1025px)
+            margin-bottom: 30px
+        .swiper-navigation
+            display: flex
+            &>div
+                font-size: 18px
+                color: #666
+                &:focus
+                    outline: none
+            .swiper-next
+                padding-left: 10px
+                position: relative
+                &::after
+                    content: ''
+                    width: 1px
+                    position: absolute
+                    height: 18px
+                    top: 50%
+                    transform: translateY(-55%)
+                    left: 0
+                    background: #edc2ab
+            .swiper-prev
+                padding-right: 9px

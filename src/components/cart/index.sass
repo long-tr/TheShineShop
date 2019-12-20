@@ -2,27 +2,20 @@
     background: #faede6
     @media(min-width: 1025px)
         padding-bottom: 55px
-    .title-h1
-        padding-bottom: 20px
-        border-bottom: 3px solid #edc2ab
-        h1 
-            font-size: 20px
-            font-weight: 700
-            color: #333333
-            text-transform: uppercase
-            @media(min-width: 768px)
-                font-size: 22px
-            @media(min-width: 1025px)
-                font-size: 24px
+    .shine-title
+        padding-bottom: 5px
+        border-bottom: 2px solid #edc2ab
+    .quantity-box
+        border-color: #deb0d1
     .main-table
         padding-top: 30px
         table
             width: 100%
-            
             thead 
                 background: #edc2ab
                 tr
                     th 
+                        white-space: nowrap
                         padding: 12px 30px
                         font-size: 18px
                         font-weight: 700
@@ -45,10 +38,13 @@
                     // &:last-child
                     //     border-bottom: none
                     td 
-                        padding: 30px 
+                        padding: 20px 
+                        @media(min-width: 1200px)
+                            padding: 30px
                         &.name
                             display: flex
                             .image
+                                flex: 0 0 140px
                                 background: #fefefe
                                 border: 1px solid #edc2ab
                                 border-radius: 10px
@@ -135,9 +131,24 @@
                             padding-right: 90px
         @media(max-width: 1025px)
             padding-top: 20px
-            overflow-x: scroll
             table 
-                width: 1000px
+                width: 100%
+                thead
+                    display: none
+                tr
+                    display: flex
+                    padding: 20px 0
+                    flex-wrap: wrap
+                    td
+                        padding: 0 10px!important
+                        width: 100%
+                        .image
+                            margin-right: 10px!important
+                            flex: 0 0 140px
+                    .amount, .discount, .total
+                        text-align: right!important
+                        margin-top: 4px
+                        width: 100%!important
     .main-total-amount
         padding: 25px 20px
         background: #ffffff
@@ -198,6 +209,7 @@
                 justify-content: center
                 align-items: center
                 input 
+                    width: 360px
                     height: 40px
                     padding: 5px 20px
                     border: 1px dashed #edc2ab
@@ -258,3 +270,9 @@
                 min-width: 250px
                 max-width: 330px
                 padding: 5px 30px
+.the-shine-shop-cart-2
+    background: #faede6
+    .related-products-wrapper
+        margin-top: 0
+        .product-item
+            margin-bottom: 0

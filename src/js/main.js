@@ -39,8 +39,8 @@ function MobileMapping() {
         selector: 'header .main-list-wrapper',
         mobileWrapper: 'header .toggle-wrapper>ul',
         mobileMethod: 'prependTo',
-        desktopWrapper: 'header .bottom-wrapper',
-        desktopMethod: 'appendTo',
+        desktopWrapper: 'header .toggle-wrapper',
+        desktopMethod: 'insertAfter',
         breakpoint: 1025,
     }).watch()
 }
@@ -95,7 +95,7 @@ function InitSlider() {
 }
 
 function RateActive() {
-    $('.product-item .rate').each(function() {
+    $('.rate').each(function() {
         let e = $(this).attr('data-rate')
         $(this).find(`em:lt(${e})`).addClass('active')
     })
@@ -142,10 +142,79 @@ function ProductDetailSlider() {
             swiper: ImageThumb
         },
         navigation: {
-            nextEl: '.product-detail .swiper-next',
-            prevEl: '.product-detail .swiper-prev',
+            nextEl: '.product-detail .image-thumb .swiper-next',
+            prevEl: '.product-detail .image-thumb .swiper-prev',
         }
     });
+    var ViewedProduct = new Swiper('.product-detail .viewed-products-wrapper .swiper-container', {
+        slidesPerView: 6,
+        speed: 1000,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.product-detail .viewed-products-wrapper .swiper-next',
+            prevEl: '.product-detail .viewed-products-wrapper .swiper-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            1025: {
+                slidesPerView: 3
+            },
+            1430: {
+                slidesPerView: 4
+            },
+
+
+        }
+    })
+    var ProductReviews = new Swiper('.product-detail .product-reviews-wrapper .swiper-container', {
+        slidesPerView: 5,
+        speed: 1000,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.product-detail .product-reviews-wrapper .swiper-next',
+            prevEl: '.product-detail .product-reviews-wrapper .swiper-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            1025: {
+                slidesPerView: 3
+            },
+            1430: {
+                slidesPerView: 4
+            },
+
+
+        }
+    })
+    var RelatedProducts = new Swiper('.related-products-wrapper .swiper-container', {
+        slidesPerView: 6,
+        speed: 1000,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.related-products-wrapper .swiper-next',
+            prevEl: '.related-products-wrapper .swiper-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            1025: {
+                slidesPerView: 3
+            },
+            1430: {
+                slidesPerView: 4
+            },
+
+
+        }
+    })
 }
 $(document).ready(function() {
     App.SetBackground()

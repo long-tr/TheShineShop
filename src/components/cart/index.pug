@@ -7,8 +7,7 @@ section.main-breadcrumb
                 a(href="#") Giỏ hàng
 section.the-shine-shop-cart.py-5
     .container
-        .title-h1
-            h1 Giỏ hàng
+        h1.shine-title Giỏ hàng
         .main-table
             table
                 thead
@@ -30,10 +29,10 @@ section.the-shine-shop-cart.py-5
                                             em.mdi.mdi-plus-circle-outline
                                             span Xoá
                             td.amount
-                                .input-number
-                                    .btn-spin.btn-dec -
-                                    input(type="text", value="1")
-                                    .btn-spin.btn-inc +
+                                .quantity-box
+                                    button -
+                                    input(type="text" value='1')
+                                    button +
                             td.discount 20.000 đ
                             td.total 320.000 ₫
         .main-total-amount
@@ -58,3 +57,48 @@ section.the-shine-shop-cart.py-5
             button
                 em.fa.fa-shopping-basket
                 | tiến hành đặt hàng
+section.the-shine-shop-cart-2.pb-5
+    .related-products-wrapper.other-wrapper
+        .container
+            .heading
+                h3.shine-title SẢN PHẨM tương tự
+                .swiper-navigation
+                    .swiper-navigation
+                        .swiper-prev
+                            em.lnr.lnr-chevron-left
+                        .swiper-next
+                            em.lnr.lnr-chevron-right
+            .list-item
+                .swiper-container
+                    .swiper-wrapper
+                        -for(i=0;i<10;i++)
+                            .swiper-slide
+                                .product-item
+                                    .top-item
+                                        .image
+                                            a(href='#')
+                                                img(src="./img/pro-3.png", alt="")
+                                        .sale -10%
+                                        .hidden-wrap
+                                            a.add-cart(href="#")
+                                                em.fa.fa-shopping-basket
+                                                span Thêm vào giỏ hàng
+                                            a.view-detail(href="#")
+                                                em.fa.fa-eye
+                                                span Xem chi tiết
+                                    .bottom-item
+                                        h5.title 
+                                            a(href="#") Bộ Kem Trị Nám Giori
+                                        .price
+                                            span.new.black 350.000 ₫
+                                            span.old 700.000 ₫
+                                        .flex
+                                            .rate(data-rate=5)
+                                                em.fa.fa-star
+                                                em.fa.fa-star
+                                                em.fa.fa-star
+                                                em.fa.fa-star
+                                                em.fa.fa-star
+                                            .cart-button
+                                                a(href="#")
+                                                    em.fa.fa-shopping-basket
